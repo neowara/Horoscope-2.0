@@ -61,7 +61,6 @@ function deleteHoroscope() {
 
 function updateHoroscope() {
     var address = "./php/updateHoroscope.php";
-    var result = document.querySelector('.result');
     var userData = new FormData();
     var selectedDate = new Date(document.querySelector('#date').value);
     selectedDate.setFullYear("2019");
