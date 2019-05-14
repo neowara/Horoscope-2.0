@@ -1,0 +1,52 @@
+body {
+    background-color: rgb(235, 157, 157);
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    margin: auto;
+    width: 70%; 
+    text-align: center;
+    padding-bottom: 100px;
+    background-color: rgb(235, 157, 157);
+
+}
+
+button {
+    background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  text-align: center;
+  font-size: 14px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  width: 17%;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.result img {
+    width: 150px;
+}
+
+#date {
+    padding: 12px;
+    width: 200px;
+    text-align: center;
+    border-color: black;
+    border: 2px solid black;
+
+}
