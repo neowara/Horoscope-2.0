@@ -43,10 +43,7 @@ function addHoroscope() {
     selectedDate.setFullYear("2019");
     var convertDate = selectedDate.toISOString().substring(0,10);
     
-
-
     userData.set("selectedDate", convertDate);
-    console.log(convertDate);
 
     serverRequest(address, "POST", userData, (response) => {
         viewHoroscope();
@@ -63,8 +60,16 @@ function deleteHoroscope() {
 }
 
 function updateHoroscope() {
-    var address = "./php/updatedHoroscope.php";
-    serverRequest(address, "POST", formData, (response)=> {
+    var address = "./php/updateHoroscope.php";
+    var result = document.querySelector('.result');
+    var userData = new FormData();
+    var selectedDate = new Date(document.querySelector('#date').value);
+    selectedDate.setFullYear("2019");
+    var convertDate = selectedDate.toISOString().substring(0,10);
+    
+    userData.set("selectedDate", convertDate);
+
+    serverRequest(address, "POST", userData, (response)=> {
         viewHoroscope();
     })
 }

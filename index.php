@@ -21,7 +21,7 @@
     <input type="date" id="date"><br>
     <br>
     <button onclick="addHoroscope()" id="saveButton">Show your horoscope</button><br>
-    <button onclick="" id="updateButton">Update</button><br>
+    <button onclick="updateHoroscope()" id="updateButton">Update</button><br>
     <button onclick="deleteHoroscope()" id="deleteButton">Delete</button><br>
 
 <div class="result"></div>
