@@ -1,9 +1,7 @@
 <?php 
-
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
 
     if(isset($_POST["selectedDate"]) && (!isset($_SESSION['horoscope']))) {
         $selectedDate = $_POST["selectedDate"];

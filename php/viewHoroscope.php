@@ -7,7 +7,7 @@
         if (isset($_SESSION["horoscope"])){
             echo json_encode($_SESSION["horoscope"]);
         } else {
-            echo json_encode('');
+            echo json_encode(false);
         }
     }
 ?>

@@ -1,5 +1,7 @@
 function serverRequest(url, method, formData, callback) {
-     var headers;
+
+     let headers;
+
      if(method == "GET" || !formData) {
          headers = {
              method: method
@@ -52,7 +54,17 @@ function addHoroscope() {
 }
 
 function deleteHoroscope() {
+    var result = document.querySelector('.result');
     var address = "./php/deleteHoroscope.php";
     serverRequest(address, "DELETE", undefined, (response)=> {
+        viewHoroscope();
+        result.innerHTML = "";
     });
+}
+
+function updateHoroscope() {
+    var address = "./php/updatedHoroscope.php";
+    serverRequest(address, "POST", formData, (response)=> {
+        viewHoroscope();
+    })
 }
